@@ -22,22 +22,22 @@
 + (instancetype) sharedInstance:(NSArray *)array withAny:(id)any;
 
 /**
- 初始化
+ Initial
 
- @param array 方法名集合，如果方法名不一样就crash
- @param any   控制器
+ @param array Method of Array，When Method Name not same will be crash
+ @param any   current VC
 
- @return 
+ @return
  */
 - (instancetype)initWithArray:(NSArray *)array withAny:(id)any;
 
 /**
- 给个信号继续运行
+ Sent Signal to Continue
  */
 - (void)setSignalForContinue;
 
 /**
- 给个信号跳出运行
+ Sent Signal to Stop GCD
  */
 - (void)setSignalForBreak;
 

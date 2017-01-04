@@ -1,9 +1,8 @@
 //
 //  SyncRequestMethod.m
-//  Aoyou
 //
 //  Created by corpsele on 16/11/7.
-//  Copyright © 2016年 Fantasy,Guoqiang. All rights reserved.
+//  Copyright © 2016年. All rights reserved.
 //
 
 #import "SyncRequestMethod.h"
@@ -28,7 +27,7 @@ static SyncRequestMethod *requestMethod = nil;
         _array = array;
         _any = any;
         _break = false;
-        
+
         [self doThisThing];
     }
     return self;
@@ -42,9 +41,9 @@ static SyncRequestMethod *requestMethod = nil;
     if (!_any) {
         return;
     }
-    
+
     [self setEvent:_array];
-    
+
 }
 
 - (void)setEvent:(NSArray *)arr
