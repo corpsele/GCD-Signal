@@ -5,6 +5,7 @@ Example:
 
 - (void)viewDidLoad 
 {
+
   [super viewDidLoad];
   
   SyncRequestMethod *sync = [[SyncRequestMethod alloc] initWithArray:@[@"request1", @"request2"] withAny:self];
