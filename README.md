@@ -3,19 +3,22 @@ GCD Stuff
 
 Example:
 
-- (void)viewDidLoad 
-{
+ - (void)viewDidLoad
+ {
 
   [super viewDidLoad];
-  
+
   SyncRequestMethod *sync = [[SyncRequestMethod alloc] initWithArray:@[@"request1", @"request2"] withAny:self];
-}
 
-- (void)request1
-{
-  AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
-  [manager POST:url
-   parameters:parameters
+ }
+
+ - (void)request1
+ {
+
+
+   AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+   [manager POST:url
+    parameters:parameters
       success:^(AFHTTPRequestOperation *operation, id responseObject) {
 
         [sync setSignalForContinue];
@@ -24,15 +27,17 @@ Example:
         [sync setSignalForContinue];
 
 
-  }];
+   }];
 
-}
+ }
 
-- (void)request2
-{
-  AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
-  [manager POST:url
-   parameters:parameters
+ - (void)request2
+ {
+
+
+   AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+   [manager POST:url
+    parameters:parameters
       success:^(AFHTTPRequestOperation *operation, id responseObject) {
 
         [sync setSignalForBreak];
@@ -41,5 +46,7 @@ Example:
         [sync setSignalForBreak];
 
 
-  }];
+   }];
+
+
 }
