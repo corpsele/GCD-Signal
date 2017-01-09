@@ -8,7 +8,8 @@ Example:
 
   [super viewDidLoad];
 
-  SyncRequestMethod *sync = [[SyncRequestMethod alloc] initWithArray:@[@"request1", @"request2"] withAny:self];
+  SyncRequestMethod *sync = [[SyncRequestMethod alloc] initWithArray:@[@"request1", @"request2"]withAny:self];
+
 
  }
 
@@ -17,13 +18,23 @@ Example:
 
 
    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+
+
    [manager POST:url
     parameters:parameters
-      success:^(AFHTTPRequestOperation *operation, id responseObject) {
+      success:^(AFHTTPRequestOperation *operation, id responseObject)
+
+       {
 
         [sync setSignalForContinue];
 
-      } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+      }
+
+      failure:^(AFHTTPRequestOperation *operation, NSError *error)
+
+      {
+
+
         [sync setSignalForContinue];
 
 
@@ -36,13 +47,23 @@ Example:
 
 
    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+
+
    [manager POST:url
     parameters:parameters
-      success:^(AFHTTPRequestOperation *operation, id responseObject) {
+      success:^(AFHTTPRequestOperation *operation, id responseObject)
+
+      {
 
         [sync setSignalForBreak];
 
-      } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+      }
+
+      failure:^(AFHTTPRequestOperation *operation, NSError *error)
+
+      {
+
+        
         [sync setSignalForBreak];
 
 
